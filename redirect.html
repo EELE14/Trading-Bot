@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirect</title>
+</head>
+<body>
+  <h1>Erfolgreich authentifiziert!</h1>
+  <p>Deine Anfrage wird bearbeitet...</p>
+  <script>
+    // Den Authorization Code aus der URL lesen
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    console.log("Authorization Code:", code);
+
+    // Optional: Weiterleitung zu einer anderen Seite
+    window.location.href = "/dashboard";
+  </script>
+</body>
+</html>
